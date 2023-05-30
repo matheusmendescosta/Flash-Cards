@@ -1,12 +1,9 @@
-import FlashCard from "./components/FlashCard/FlashCard";
+import FlashCardsPage from "./pages/FlashCardsPage";
 
 function App() {
   return (
     <div>
-      <header>
-          <h1 className="text-3xl font-bold ">Matheus Mendes</h1>
-          <FlashCard />
-      </header>
+      <FlashCardsPage />
     </div>
   );
 }
