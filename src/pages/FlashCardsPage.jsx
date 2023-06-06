@@ -5,6 +5,8 @@ import FlashCards from "../components/FlashCards/FlashCards";
 import Button from "../components/Button/Button";
 import { helperShufflerArray } from "../helpers/ArrayHelpers";
 import RadioButton from "../components/RadioButton/RadioButton";
+import Header from "../components/Header/Header";
+import Main from "../components/Main/Main";
 
 function FlashCardsPage() {
   const [allCards, setAllCards] = useState(allFlashCards);
@@ -24,7 +26,10 @@ function FlashCardsPage() {
   }
 
   return (
-    <>
+    <Main>
+      <div>
+        <Header Description="Flash Cards" />
+      </div>
       <div className="text-center mb-4">
         <Button onButtonClick={handleButtonClick}>Embaralhar Cards</Button>
       </div>
@@ -47,7 +52,7 @@ function FlashCardsPage() {
           return <FlashCard key={id} title={title} description={description} showTitleFlashCard={showTitle} />;
         })}
       </FlashCards>
-    </>
+    </Main>
   );
 }
 
